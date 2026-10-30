@@ -1,0 +1,9 @@
+node_modules/
+.venv
+models/
+build/
+out/
+assets/reel/
+.hyperframes/
+index.html
+compositions/

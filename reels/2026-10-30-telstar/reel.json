@@ -1,0 +1,162 @@
+{
+  "slug": "2026-10-30-telstar",
+  "voice": "pm_santa",
+  "topic": "Por que a bola de futebol clássica é preta e branca (Adidas Telstar, Copa de 1970)",
+  "sources": [
+    "https://en.wikipedia.org/wiki/Adidas_Telstar",
+    "https://99percentinvisible.org/article/turning-point-the-original-goal-of-soccers-iconic-black-and-white-ball-design/"
+  ],
+  "hook": [
+    "A bola *sumia* na TV.",
+    "Em 1970, a Adidas resolveu isso com *tinta preta*."
+  ],
+  "hook_card": {
+    "icon": "tv",
+    "variant": "faint",
+    "caption": "copa_1970.tv",
+    "strike_at": "sumia"
+  },
+  "hook_chips": [
+    {
+      "text": "1970",
+      "at": "1970"
+    },
+    {
+      "text": "Adidas",
+      "at": "Adidas"
+    },
+    {
+      "text": "tinta preta",
+      "at": "tinta",
+      "payoff": true
+    }
+  ],
+  "points": [
+    {
+      "name": "tv cinza",
+      "title": [
+        "TV",
+        "CINZA"
+      ],
+      "title_at": "TV",
+      "stat": {
+        "num": "1970",
+        "label": "méxico"
+      },
+      "card": {
+        "count_to": 1970,
+        "format": "plain",
+        "label": "copa do mundo",
+        "icon": "tv"
+      },
+      "terminal": "sinal: preto e branco",
+      "say": "Em 1970, quase toda *TV* do mundo era preto e branco.",
+      "explain": "E a bola clara se *misturava* ao gramado cinza.",
+      "stamp": "INVISÍVEL",
+      "stamp_at": "misturava",
+      "demo": {
+        "type": "tv_fade",
+        "beats": {
+          "fade": "clara"
+        }
+      }
+    },
+    {
+      "name": "32 gomos",
+      "title": [
+        "32",
+        "GOMOS"
+      ],
+      "title_at": "32",
+      "stat": {
+        "num": "32",
+        "label": "gomos"
+      },
+      "card": {
+        "count_to": 32,
+        "format": "plain",
+        "label": "gomos na telstar",
+        "icon": "ball"
+      },
+      "terminal": "12 pentágonos + 20 hexágonos",
+      "say": "A bola Telstar tinha 32 gomos: 12 *pretos* e 20 brancos.",
+      "explain": "Girando na tela, ela ficava fácil de *seguir*.",
+      "stamp": "VISÍVEL",
+      "stamp_at": "seguir",
+      "demo": {
+        "type": "ball_spin",
+        "beats": {
+          "spin": "Girando"
+        }
+      }
+    },
+    {
+      "name": "nome espacial",
+      "title": [
+        "NOME",
+        "ESPACIAL"
+      ],
+      "title_at": "nome",
+      "stat": {
+        "num": "1962",
+        "label": "lançamento"
+      },
+      "card": {
+        "count_to": 1962,
+        "format": "plain",
+        "label": "satélite telstar",
+        "icon": "satellite"
+      },
+      "terminal": "telstar 1 · órbita da terra",
+      "say": "O nome veio do Telstar, um *satélite* de 1962.",
+      "explain": "Redondo e cheio de painéis, ele parecia uma *bola*.",
+      "stamp": "TELSTAR",
+      "stamp_at": "bola",
+      "demo": {
+        "type": "orbit_morph",
+        "beats": {
+          "morph": "parecia"
+        }
+      }
+    },
+    {
+      "name": "só vinte",
+      "title": [
+        "SÓ",
+        "VINTE"
+      ],
+      "title_at": "só",
+      "stat": {
+        "num": "600 mil",
+        "label": "réplicas"
+      },
+      "card": {
+        "count_to": 20,
+        "format": "plain",
+        "label": "bolas na copa toda",
+        "icon": "ball"
+      },
+      "terminal": "réplicas vendidas: 600.000",
+      "say": "A Adidas mandou só *20 bolas* para a Copa inteira.",
+      "explain": "Depois, vendeu cerca de 600 mil *réplicas*.",
+      "stamp": "600 MIL",
+      "stamp_at": "réplicas",
+      "demo": {
+        "type": "grid_multiply",
+        "n": 20,
+        "big": 600000,
+        "big_label": "réplicas vendidas",
+        "beats": {
+          "multiply": "600"
+        }
+      }
+    }
+  ],
+  "close": "E é por isso que a bola que você desenha até hoje é *preta e branca*.",
+  "close_card": {
+    "icon": "tv",
+    "variant": "clear",
+    "caption": "telstar_1970.tv",
+    "ring_at": "preta"
+  }
+}
