@@ -3,7 +3,33 @@
     "date": "2026-10-30",
     "slug": "2026-10-30-telstar",
     "topic": "Por que a bola clássica é preta e branca (Adidas Telstar, Copa de 1970)",
-    "facts": ["TV preto e branco em 1970", "32 gomos: 12 pentágonos pretos e 20 hexágonos brancos", "nome do satélite Telstar de 1962", "20 bolas na Copa, cerca de 600 mil réplicas"],
-    "sources": ["https://en.wikipedia.org/wiki/Adidas_Telstar", "https://99percentinvisible.org/article/turning-point-the-original-goal-of-soccers-iconic-black-and-white-ball-design/"]
+    "facts": [
+      "TV preto e branco em 1970",
+      "32 gomos: 12 pentágonos pretos e 20 hexágonos brancos",
+      "nome do satélite Telstar de 1962",
+      "20 bolas na Copa, cerca de 600 mil réplicas"
+    ],
+    "sources": [
+      "https://en.wikipedia.org/wiki/Adidas_Telstar",
+      "https://99percentinvisible.org/article/turning-point-the-original-goal-of-soccers-iconic-black-and-white-ball-design/"
+    ]
+  },
+  {
+    "date": "2026-10-31",
+    "slug": "2026-10-31-cartoes",
+    "topic": "A origem dos cartões amarelo e vermelho (Ken Aston, Copa de 1966, estreia em 1970)",
+    "facts": [
+      "Rattín expulso por Kreitlein em Inglaterra x Argentina, quartas de 1966, e demorou a sair",
+      "Ken Aston teve a ideia num semáforo em Kensington, Londres",
+      "cartões estrearam na Copa de 1970; nenhum vermelho naquela Copa",
+      "1º vermelho em Copas: Carlos Caszely (Chile) x Alemanha Ocidental, 14/06/1974"
+    ],
+    "sources": [
+      "https://en.wikipedia.org/wiki/Ken_Aston",
+      "https://www.history.com/articles/yellow-red-cards-1966-world-cup",
+      "https://www.flashscore.com/news/flashback-the-traffic-light-that-inspired-the-introduction-of-cards-in-football/StdvGTdD",
+      "https://www.guinnessworldrecords.com/world-records/482316-first-player-to-receive-a-red-card-at-the-fifa-world-cup",
+      "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_red_cards"
+    ]
   }
 ]

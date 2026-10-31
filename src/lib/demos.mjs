@@ -232,4 +232,31 @@ export const DEMOS = {
       stampPos: { left: 600, top: 1010 },
     };
   },
+
+  /** Semáforo genérico: acende o amarelo, depois o vermelho, e um cartão de cada cor desliza ao lado.
+   *  beats: yellow, red */
+  traffic_light(pid, p, T) {
+    const y = beat(T, "yellow", T.in + 0.5);
+    const r = beat(T, "red", y + 0.8);
+    const lamp = (cy, idn) => `<circle cx="100" cy="${cy}" r="34" fill="#4A4642" stroke="${C.ink}" stroke-width="5"/>` +
+      (idn ? `<circle id="${pid}-${idn}" cx="100" cy="${cy}" r="34" fill="${idn === "ly" ? "#EFC23A" : C.red}" stroke="${C.ink}" stroke-width="5" opacity="0"/>` : "");
+    const svg = `<svg viewBox="0 0 200 400" width="300" height="600" overflow="visible">
+      <rect x="92" y="330" width="16" height="70" fill="${C.ink}"/>
+      <rect x="44" y="18" width="112" height="320" rx="22" fill="#2C2926" stroke="${C.ink}" stroke-width="5"/>
+      ${lamp(90, "lr")}${lamp(178, "ly")}${lamp(266, null)}</svg>`;
+    return {
+      html: `<div id="${pid}-demo" class="demo">
+        <div style="position:absolute;left:170px;top:470px;width:300px;height:600px">${svg}</div>
+        <div id="${pid}-cy" style="position:absolute;left:520px;top:500px;width:260px;height:260px;opacity:0">${icon("card", {}, 260)}</div>
+        <div id="${pid}-cyl" class="mono" style="position:absolute;left:770px;top:600px;font-size:32px;color:${C.ink};opacity:0">atenção</div>
+        <div id="${pid}-cr" style="position:absolute;left:520px;top:780px;width:260px;height:260px;opacity:0">${icon("card-red", {}, 260)}</div>
+        <div id="${pid}-crl" class="mono" style="position:absolute;left:770px;top:880px;font-size:32px;color:${C.red};opacity:0">fora</div></div>`,
+      js: `rise(tl,"#${pid}-demo",${f(T.in)});
+        tl.to("#${pid}-ly",{opacity:1,duration:0.12},${f(y)}); pop(tl,"#${pid}-cy",${f(y + 0.08)}); pop(tl,"#${pid}-cyl",${f(y + 0.2)});
+        tl.to("#${pid}-ly",{opacity:0,duration:0.12},${f(r)}); tl.to("#${pid}-lr",{opacity:1,duration:0.12},${f(r)});
+        pop(tl,"#${pid}-cr",${f(r + 0.08)}); pop(tl,"#${pid}-crl",${f(r + 0.2)});`,
+      sfx: [{ type: "whoosh", t: T.in }, { type: "pop", t: y + 0.08 }, { type: "pop", t: r + 0.08 }],
+      stampPos: { left: 600, top: 1080 },
+    };
+  },
 };

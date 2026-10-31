@@ -1,0 +1,88 @@
+{
+  "slug": "2026-10-31-cartoes",
+  "voice": "pm_santa",
+  "topic": "A origem dos cartões amarelo e vermelho (Ken Aston, Copa de 1966, estreia em 1970)",
+  "sources": [
+    "https://en.wikipedia.org/wiki/Ken_Aston",
+    "https://www.history.com/articles/yellow-red-cards-1966-world-cup",
+    "https://www.flashscore.com/news/flashback-the-traffic-light-that-inspired-the-introduction-of-cards-in-football/StdvGTdD",
+    "https://www.guinnessworldrecords.com/world-records/482316-first-player-to-receive-a-red-card-at-the-fifa-world-cup",
+    "https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_red_cards"
+  ],
+  "pronounce": {"Rattín": "Ratín", "Aston": "Éston", "Caszely": "Cassêli"},
+  "hook": [
+    "O expulso *não saía*.",
+    "Em 1966, essa confusão criou os *cartões* do futebol."
+  ],
+  "hook_card": {"icon": "card-red", "variant": "faint", "caption": "copa_1966.ref", "strike_at": "saía"},
+  "hook_chips": [
+    {"text": "1966", "at": "1966"},
+    {"text": "confusão", "at": "confusão"},
+    {"text": "cartões", "at": "cartões", "payoff": true}
+  ],
+  "points": [
+    {
+      "name": "copa de 1966",
+      "title": ["COPA", "1966"],
+      "title_at": "Copa",
+      "stat": {"num": "1966", "label": "inglaterra"},
+      "card": {"count_to": 1966, "format": "plain", "label": "quartas de final", "icon": "whistle"},
+      "terminal": "inglaterra x argentina",
+      "say": "Na Copa de 1966, o árbitro alemão *expulsou* o capitão argentino Rattín.",
+      "explain": "Mas os dois não se entendiam, e Rattín *demorou* minutos para sair.",
+      "stamp": "NÃO SAI",
+      "stamp_at": "demorou",
+      "demo": {
+        "type": "icon_pop",
+        "items": [{"icon": "whistle", "label": "árbitro alemão"}, {"icon": "stopwatch", "label": "minutos parado"}],
+        "beats": {"i0": "entendiam", "i1": "demorou"}
+      }
+    },
+    {
+      "name": "sinal fechado",
+      "title": ["SINAL", "FECHADO"],
+      "title_at": "trânsito",
+      "stat": {"num": "2", "label": "cores"},
+      "card": {"count_to": 2, "format": "plain", "label": "cores, zero tradução", "icon": "card"},
+      "terminal": "2 cores, zero tradução",
+      "say": "No *trânsito* de Londres, o chefe dos árbitros, Ken Aston, teve a ideia.",
+      "explain": "Cor não precisa de *idioma*: amarelo é advertência, vermelho é expulsão.",
+      "stamp": "UNIVERSAL",
+      "stamp_at": "vermelho",
+      "demo": {"type": "traffic_light", "beats": {"yellow": "amarelo", "red": "vermelho"}}
+    },
+    {
+      "name": "estreia",
+      "title": ["ESTREIA", "1970"],
+      "title_at": "cartões",
+      "stat": {"num": "0", "label": "vermelhos"},
+      "card": {"count_to": 1970, "format": "plain", "label": "copa do méxico", "icon": "card"},
+      "terminal": "cartões vermelhos: 0",
+      "say": "Os *cartões* estrearam na Copa de 1970, no México.",
+      "explain": "E nenhum jogador recebeu o *vermelho* naquela Copa.",
+      "stamp": "ZERO",
+      "stamp_at": "vermelho",
+      "demo": {
+        "type": "timeline",
+        "items": [{"year": "1966", "label": "a confusão"}, {"year": "1970", "label": "estreia"}, {"year": "1974", "label": "1º vermelho"}],
+        "highlight": 1,
+        "beats": {"highlight": "nenhum"}
+      }
+    },
+    {
+      "name": "primeiro vermelho",
+      "title": ["PRIMEIRO", "VERMELHO"],
+      "title_at": "primeiro",
+      "stat": {"num": "1974", "label": "alemanha"},
+      "card": {"count_to": 1974, "format": "plain", "label": "1º vermelho em copas", "icon": "card-red"},
+      "terminal": "caszely · chile · 14/06/1974",
+      "say": "O primeiro *vermelho* de Copa saiu em 1974, para o chileno Carlos Caszely.",
+      "explain": "Foi contra a Alemanha Ocidental, e dessa vez todo mundo *entendeu*.",
+      "stamp": "EXPULSO",
+      "stamp_at": "entendeu",
+      "demo": {"type": "card_flip", "color": "red", "text": "chile x alemanha ocidental", "beats": {"show": "Alemanha"}}
+    }
+  ],
+  "close": "E tudo porque um expulso *não saía* de campo.",
+  "close_card": {"icon": "card-red", "variant": "clear", "caption": "cartao_1970.ref", "ring_at": "saía"}
+}

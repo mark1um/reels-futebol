@@ -53,10 +53,11 @@ Campos de cada ponto:
 | `demo` | `{type, beats, ...params}` — veja abaixo |
 
 `hook_card`: `{icon, variant, caption, strike_at}`; `hook_chips`: 2-4 `{text, payoff?, at}`;
-`close_card`: `{icon, variant, caption, ring_at}`. Para o loop, `hook_card` e `close_card`
+`close_card`: `{icon, variant, caption, ring_at}` (a legenda do cartão no fim é sempre a do `hook_card`). Para o loop, `hook_card` e `close_card`
 devem usar o mesmo ícone (o fim volta ao estado do começo).
 
 Ícones (`src/lib/icons.mjs`): `ball`, `ball-faint`, `plain-ball`, `tv` (variant `faint`/`clear`/`empty`),
+`card`/`card-red` (variant `faint` = cartão tracejado "que ainda não existe"),
 `satellite`, `globe`, `trophy`, `whistle`, `card`, `card-red`, `goal`, `stopwatch`,
 `calendar` (`text`), `pitch`, `boot`, `scoreboard`.
 
@@ -74,6 +75,7 @@ Demos (`src/lib/demos.mjs`) — `beats` apontam para palavras faladas (`"palavra
 | `card_flip` | `color` (yellow/red), `text` | `show` |
 | `pitch_path` | — | `goal` |
 | `icon_pop` | `items:[{icon,label}]` (até 3) | `i0`, `i1`, `i2` |
+| `traffic_light` | — (semáforo + cartões amarelo e vermelho) | `yellow`, `red` |
 
 Se nenhuma demo encenar bem o que a voz diz, crie uma nova em `src/lib/demos.mjs` seguindo o
 mesmo contrato e registre-a na tabela acima.

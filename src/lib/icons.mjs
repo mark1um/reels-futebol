@@ -108,7 +108,10 @@ export function whistle() {
   <circle cx="82" cy="118" r="16" fill="${C.ink}"/><path d="M40,98Q20,70 40,50" fill="none" ${S}/></g>`;
 }
 
-export function refCard({ color = "yellow" } = {}) {
+export function refCard({ color = "yellow", variant } = {}) {
+  // variant "faint": cartão que ainda não existe (contorno tracejado, sem cor)
+  if (variant === "faint") return `<g><rect x="56" y="24" width="88" height="128" rx="10" fill="#DDD8D0" stroke="${C.light}" stroke-width="5" stroke-dasharray="12 9" transform="rotate(8 100 88)"/>
+  <path d="M74,176H126" stroke="${C.light}" stroke-width="5" stroke-linecap="round"/></g>`;
   const f = color === "red" ? C.red : "#EFC23A";
   return `<g><rect x="56" y="24" width="88" height="128" rx="10" fill="${f}" ${S} transform="rotate(8 100 88)"/>
   <path d="M74,176H126" ${S}/></g>`;
@@ -155,7 +158,7 @@ export function scoreboardIcon() {
 
 export const ICONS = {
   ball: () => ball(), "ball-faint": () => ball({ faint: true }), "plain-ball": () => plainBall({ r: 80 }),
-  tv: (o) => tv(o), satellite, globe, trophy, whistle, card: (o) => refCard(o), "card-red": () => refCard({ color: "red" }),
+  tv: (o) => tv(o), satellite, globe, trophy, whistle, card: (o) => refCard(o), "card-red": (o = {}) => refCard({ ...o, color: "red" }),
   goal, stopwatch, calendar: (o) => calendar(o), pitch, boot, scoreboard: scoreboardIcon,
 };
 
