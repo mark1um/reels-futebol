@@ -1,0 +1,197 @@
+{
+  "slug": "2026-11-01-penalti",
+  "voice": "pm_santa",
+  "topic": "A origem do pênalti (William McCrum, goleiro irlandês; regra de 1891, 12 jardas, marca só em 1902)",
+  "sources": [
+    "https://outsidewrite.co.uk/the-irishmans-motion-and-the-birth-of-the-penalty-kick",
+    "https://belfastmedia.com/armagh-s-mccrum-was-spot-on-with-reform-that-revolutionised-soccer",
+    "https://www.liquisearch.com/penalty_kick/history",
+    "https://en.wikipedia.org/wiki/Billy_Heath",
+    "https://www.wolves.co.uk/news/club/on-this-day-september-edition/",
+    "https://en.wikipedia.org/wiki/Penalty_area"
+  ],
+  "pronounce": {
+    "McCrum": "Mac Crâm",
+    "Heath": "Rít"
+  },
+  "hook": [
+    "Um *goleiro* inventou o pênalti.",
+    "E isso explica os *11 metros* da cobrança."
+  ],
+  "hook_card": {
+    "icon": "goal",
+    "caption": "regra_1890.ref",
+    "strike_at": "pênalti"
+  },
+  "hook_chips": [
+    {
+      "text": "goleiro",
+      "at": "goleiro"
+    },
+    {
+      "text": "pênalti",
+      "at": "pênalti"
+    },
+    {
+      "text": "11 metros",
+      "at": "metros",
+      "payoff": true
+    }
+  ],
+  "points": [
+    {
+      "name": "o goleiro",
+      "title": [
+        "GOLEIRO",
+        "IRLANDÊS"
+      ],
+      "title_at": "goleiro",
+      "stat": {
+        "num": "1890",
+        "label": "irlanda"
+      },
+      "card": {
+        "count_to": 1890,
+        "format": "plain",
+        "label": "milford, irlanda",
+        "icon": "goal"
+      },
+      "terminal": "william mccrum · goleiro",
+      "say": "O goleiro irlandês William McCrum cansou de ver *falta* perto do gol.",
+      "explain": "Zagueiros derrubavam atacantes de propósito, porque a falta *compensava*.",
+      "stamp": "DE PROPÓSITO",
+      "stamp_at": "compensava",
+      "demo": {
+        "type": "icon_pop",
+        "items": [
+          {
+            "icon": "boot",
+            "label": "falta na área"
+          },
+          {
+            "icon": "goal",
+            "label": "gol evitado"
+          }
+        ],
+        "beats": {
+          "i0": "derrubavam",
+          "i1": "compensava"
+        }
+      }
+    },
+    {
+      "name": "a regra",
+      "title": [
+        "REGRA",
+        "1891"
+      ],
+      "title_at": "Em",
+      "stat": {
+        "num": "12",
+        "label": "jardas"
+      },
+      "card": {
+        "count_to": 12,
+        "format": "plain",
+        "label": "jardas do gol",
+        "icon": "ball"
+      },
+      "terminal": "12 jardas = 10,97 metros",
+      "say": "Em 1891, a ideia dele virou *regra*: cobrança a 12 jardas do gol.",
+      "explain": "E 12 jardas dão quase *11 metros*, a distância que vale até hoje.",
+      "stamp": "11 METROS",
+      "stamp_at": "distância",
+      "demo": {
+        "type": "big_number",
+        "value": 11,
+        "suffix": " m",
+        "label": "12 jardas = 10,97 m",
+        "format": "plain"
+      }
+    },
+    {
+      "name": "sem marca",
+      "title": [
+        "SEM",
+        "MARCA"
+      ],
+      "title_at": "No",
+      "stat": {
+        "num": "1902",
+        "label": "a marca"
+      },
+      "card": {
+        "count_to": 1902,
+        "format": "plain",
+        "label": "nasce a marca do pênalti",
+        "icon": "pitch"
+      },
+      "terminal": "marca do pênalti: 1902",
+      "say": "No começo não havia *marca*: o batedor escolhia um ponto numa linha.",
+      "explain": "A marca do pênalti só *apareceu* em 1902.",
+      "stamp": "SÓ EM 1902",
+      "stamp_at": "apareceu",
+      "demo": {
+        "type": "timeline",
+        "items": [
+          {
+            "year": "1890",
+            "label": "a ideia"
+          },
+          {
+            "year": "1891",
+            "label": "a regra"
+          },
+          {
+            "year": "1902",
+            "label": "a marca"
+          }
+        ],
+        "highlight": 2,
+        "beats": {
+          "highlight": "apareceu"
+        }
+      }
+    },
+    {
+      "name": "primeiro na liga",
+      "title": [
+        "PRIMEIRO",
+        "PÊNALTI"
+      ],
+      "title_at": "primeiro",
+      "stat": {
+        "num": "5x0",
+        "label": "wolves"
+      },
+      "card": {
+        "count_to": 1891,
+        "format": "plain",
+        "label": "liga inglesa, setembro",
+        "icon": "scoreboard"
+      },
+      "terminal": "heath · wolves 5 x 0 accrington",
+      "say": "O primeiro pênalti da liga inglesa foi em setembro de 1891.",
+      "explain": "O atacante Billy Heath *marcou*, e o time dele venceu por 5 a 0.",
+      "stamp": "GOL",
+      "stamp_at": "marcou",
+      "demo": {
+        "type": "scoreboard",
+        "home": "WOL",
+        "away": "ACC",
+        "a": 5,
+        "b": 0,
+        "minute": "14/09/1891",
+        "beats": {
+          "score": "venceu"
+        }
+      }
+    }
+  ],
+  "close": "Tudo isso saiu da cabeça de um *goleiro*.",
+  "close_card": {
+    "icon": "goal",
+    "caption": "penalti_1891.ref",
+    "ring_at": "goleiro"
+  }
+}
