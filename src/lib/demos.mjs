@@ -173,7 +173,7 @@ export const DEMOS = {
       const w = Math.round(560 * (it.value / max));
       rows += `<div style="position:absolute;left:120px;top:${560 + i * 120}px;width:840px;height:100px">
         <div class="mono" style="font-size:28px;color:${C.gray}">${it.label}</div>
-        <div class="${pid}-bar" style="position:absolute;top:40px;left:0;height:54px;width:${w}px;background:${i === items.length - 1 ? C.red : C.ink};border-radius:8px;transform-origin:left center"></div>
+        <div class="${pid}-bar" style="position:absolute;top:40px;left:0;height:54px;width:${w}px;background:${i === (d.highlight ?? items.length - 1) ? C.red : C.ink};border-radius:8px;transform-origin:left center"></div>
         <div class="anton" style="position:absolute;top:34px;left:${w + 20}px;font-size:56px;color:${C.ink}"><span id="${pid}-v${i}">0</span></div></div>`;
     });
     const js = items.map((it, i) => `count(tl,"#${pid}-v${i}",${it.value},${f(T.in + 0.15 + i * 0.2)},1.15,"${d.format || "thousands"}");`).join("");

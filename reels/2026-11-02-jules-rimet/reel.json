@@ -1,0 +1,127 @@
+{
+  "slug": "2026-11-02-jules-rimet",
+  "voice": "pm_santa",
+  "topic": "A taça Jules Rimet: roubada em Londres em 1966, achada pelo cachorro Pickles, ficou com o Brasil em 1970 e sumiu para sempre em 1983",
+  "sources": [
+    "https://en.wikipedia.org/wiki/1966_theft_of_the_Jules_Rimet_Trophy",
+    "https://www.history.co.uk/articles/pickles-the-dog-world-cup",
+    "https://historyrevealed.com/period/20th-century/jules-rimet-trophy-football-world-cup-stolen-lost-found-pickles",
+    "https://www.aetv.com/articles/brazil-jules-rimet-trophy-stolen-1983",
+    "https://www.lance.com.br/copa-do-mundo/curiosidades-das-copas-jules-rimet-taca-que-foi-roubada-duas-vezes.html"
+  ],
+  "pronounce": {
+    "Pickles": "Píquels",
+    "Jules": "Jiúl",
+    "Rimet": "Rimê",
+    "CBF": "cê bê éfe"
+  },
+  "hook": [
+    "Um *cachorro* salvou a Copa.",
+    "E a mesma taça depois *sumiu* para sempre, no Brasil."
+  ],
+  "hook_card": {
+    "icon": "trophy",
+    "variant": "clear",
+    "caption": "taca_1966.ref",
+    "strike_at": "sumiu"
+  },
+  "hook_chips": [
+    { "text": "cachorro", "at": "cachorro" },
+    { "text": "taça", "at": "taça" },
+    { "text": "sumiu", "at": "sumiu", "payoff": true }
+  ],
+  "points": [
+    {
+      "name": "o roubo",
+      "title": ["TAÇA", "ROUBADA"],
+      "title_at": "Em",
+      "stat": { "num": "1966", "label": "londres" },
+      "card": { "count_to": 1966, "format": "plain", "label": "londres, março", "icon": "trophy" },
+      "terminal": "20/03/1966 · westminster",
+      "say": "Em março de 1966, a taça Jules Rimet foi *roubada* em Londres.",
+      "explain": "Ela sumiu de uma exposição de selos, meses antes da *Copa* na Inglaterra.",
+      "stamp": "ROUBADA",
+      "stamp_at": "Copa",
+      "demo": {
+        "type": "icon_pop",
+        "items": [
+          { "icon": "trophy", "variant": "faint", "label": "vitrine vazia" },
+          { "icon": "calendar", "text": "66", "label": "copa na inglaterra" }
+        ],
+        "beats": { "i0": "sumiu", "i1": "Copa" }
+      }
+    },
+    {
+      "name": "o faro",
+      "title": ["CACHORRO", "HERÓI"],
+      "title_at": "Uma",
+      "stat": { "num": "7", "label": "dias" },
+      "card": { "count_to": 7, "format": "plain", "label": "dias desaparecida", "icon": "dog" },
+      "terminal": "pickles · sul de londres",
+      "say": "Uma semana depois, o cachorro *Pickles* farejou um pacote no sul de Londres.",
+      "explain": "Dentro, embrulhada em *jornal*, estava a taça.",
+      "stamp": "ACHADA",
+      "stamp_at": "taça",
+      "demo": {
+        "type": "icon_pop",
+        "items": [
+          { "icon": "dog", "label": "pickles" },
+          { "icon": "parcel", "label": "pacote" },
+          { "icon": "trophy", "label": "a taça" }
+        ],
+        "beats": { "i0": "Pickles", "i1": "jornal", "i2": "taça" }
+      }
+    },
+    {
+      "name": "o tri",
+      "title": ["TAÇA", "ETERNA"],
+      "title_at": "Em",
+      "stat": { "num": "3", "label": "títulos" },
+      "card": { "count_to": 1970, "format": "plain", "label": "brasil tricampeão", "icon": "trophy" },
+      "terminal": "tri = taça para sempre",
+      "say": "Em 1970, o Brasil virou o primeiro *tricampeão* do mundo.",
+      "explain": "Pela regra, a taça Jules Rimet ficou com o Brasil *para sempre*.",
+      "stamp": "É NOSSA",
+      "stamp_at": "sempre",
+      "demo": {
+        "type": "bars",
+        "items": [
+          { "label": "brasil", "value": 3 },
+          { "label": "itália", "value": 2 },
+          { "label": "uruguai", "value": 2 }
+        ],
+        "format": "plain",
+        "highlight": 0
+      }
+    },
+    {
+      "name": "o sumiço",
+      "title": ["SUMIU", "DE VEZ"],
+      "title_at": "Mas",
+      "stat": { "num": "1983", "label": "rio" },
+      "card": { "count_to": 1983, "format": "plain", "label": "sede da cbf, rio", "icon": "trophy" },
+      "terminal": "19/12/1983 · nunca achada",
+      "say": "Mas em dezembro de 1983, ladrões *invadiram* a sede da CBF, no Rio.",
+      "explain": "Levaram a taça, e ela *nunca* mais foi encontrada.",
+      "stamp": "SUMIU",
+      "stamp_at": "nunca",
+      "demo": {
+        "type": "timeline",
+        "items": [
+          { "year": "1966", "label": "roubada" },
+          { "year": "1970", "label": "do brasil" },
+          { "year": "1983", "label": "sumiu" }
+        ],
+        "highlight": 2,
+        "beats": { "highlight": "nunca" }
+      }
+    }
+  ],
+  "close": "Dessa vez, nenhum *cachorro* salvou a Copa.",
+  "close_card": {
+    "icon": "trophy",
+    "variant": "faint",
+    "caption": "taca_1983.ref",
+    "ring_at": "cachorro"
+  }
+}

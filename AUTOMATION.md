@@ -59,7 +59,9 @@ devem usar o mesmo ícone (o fim volta ao estado do começo).
 Ícones (`src/lib/icons.mjs`): `ball`, `ball-faint`, `plain-ball`, `tv` (variant `faint`/`clear`/`empty`),
 `card`/`card-red` (variant `faint` = cartão tracejado "que ainda não existe"),
 `satellite`, `globe`, `trophy`, `whistle`, `card`, `card-red`, `goal`, `stopwatch`,
-`calendar` (`text`), `pitch`, `boot`, `scoreboard`.
+`calendar` (`text`), `pitch`, `boot`, `scoreboard`, `dog` (cachorro genérico),
+`parcel` (pacote embrulhado em jornal), `trophy` (variant `faint` = taça sumida, tracejada).
+Obs.: sem `variant`, o `hook_card` usa `faint`; para começar com o ícone cheio, use `"variant": "clear"`.
 
 Demos (`src/lib/demos.mjs`) — `beats` apontam para palavras faladas (`"palavra"` ou `"palavra#2"`):
 | type | params | beats |
@@ -71,7 +73,7 @@ Demos (`src/lib/demos.mjs`) — `beats` apontam para palavras faladas (`"palavra
 | `big_number` | `value`, `label`, `format`, `prefix`, `suffix` | — |
 | `scoreboard` | `home`, `away`, `a`, `b`, `minute` | `score` |
 | `timeline` | `items:[{year,label}]`, `highlight` | `highlight` |
-| `bars` | `items:[{label,value}]`, `format` | — |
+| `bars` | `items:[{label,value}]`, `format`, `highlight` (índice da barra vermelha; padrão: a última) | — |
 | `card_flip` | `color` (yellow/red), `text` | `show` |
 | `pitch_path` | — | `goal` |
 | `icon_pop` | `items:[{icon,label}]` (até 3) | `i0`, `i1`, `i2` |

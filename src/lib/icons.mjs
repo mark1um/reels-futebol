@@ -97,7 +97,11 @@ export function globe() {
   <path d="M120,60Q140,52 156,70Q166,90 150,100Q136,104 140,124Q144,146 126,150Q112,140 116,118Q118,96 110,84Q108,68 120,60Z" fill="#B9CFA3" stroke="${C.ink}" stroke-width="3"/></g>`;
 }
 
-export function trophy() {
+export function trophy({ variant } = {}) {
+  // variant "faint": taça sumida (contorno tracejado, sem cor)
+  if (variant === "faint") return `<g fill="#DDD8D0" stroke="${C.light}" stroke-width="5" stroke-dasharray="12 9" stroke-linejoin="round">
+  <path d="M62,30H138V70Q138,118 100,124Q62,118 62,70Z"/><path d="M62,44H40Q34,80 66,92M138,44H160Q166,80 134,92" fill="none"/>
+  <path d="M92,124H108V146H92Z"/><rect x="66" y="146" width="68" height="26" rx="5"/></g>`;
   return `<g><path d="M62,30H138V70Q138,118 100,124Q62,118 62,70Z" fill="#E2B84A" ${S}/>
   <path d="M62,44H40Q34,80 66,92M138,44H160Q166,80 134,92" fill="none" ${S}/>
   <path d="M92,124H108V146H92Z" fill="#E2B84A" ${S}/><rect x="66" y="146" width="68" height="26" rx="5" fill="${C.ink}" ${S}/></g>`;
@@ -156,10 +160,30 @@ export function scoreboardIcon() {
   <circle cx="100" cy="88" r="4" fill="#FBFAF8"/><circle cx="100" cy="114" r="4" fill="#FBFAF8"/></g>`;
 }
 
+/** Cachorro genérico de perfil (preto e branco), farejando. */
+export function dog() {
+  return `<g><path d="M44,104Q40,82 62,78H128Q146,78 150,96V140H136V112H74V140H60V116Q46,116 44,104Z" fill="#FBFAF8" ${S}/>
+  <path d="M60,78H112Q118,96 104,104H70Q56,100 60,78Z" fill="${C.ink}"/>
+  <path d="M60,140V172M74,140V172M136,140V172M150,140V172" ${S} stroke-width="9"/>
+  <path d="M44,98Q24,90 18,64" fill="none" ${S} stroke-width="7"/>
+  <path d="M140,84Q148,50 172,52Q194,56 192,82Q190,96 176,98Q158,100 150,96" fill="#FBFAF8" ${S}/>
+  <path d="M156,56Q144,58 146,84Q160,80 162,58Z" fill="${C.ink}" ${S} stroke-width="3"/>
+  <circle cx="190" cy="84" r="6" fill="${C.ink}"/><circle cx="174" cy="70" r="4" fill="${C.ink}"/></g>`;
+}
+
+/** Pacote embrulhado em jornal e amarrado com barbante. */
+export function parcel() {
+  return `<g><path d="M34,70L100,44L166,70V146L100,172L34,146Z" fill="#E4DFD6" ${S}/>
+  <path d="M34,70L100,96L166,70M100,96V172" fill="none" ${S} stroke-width="3"/>
+  <path d="M50,92L86,106M50,106L86,120M50,120L80,132M114,106L150,92M114,120L150,106M114,134L144,122" stroke="${C.gray}" stroke-width="4" stroke-linecap="round"/>
+  <path d="M67,57L133,83V159M133,57L67,83V159" fill="none" stroke="${C.red}" stroke-width="5"/>
+  <path d="M100,44Q84,24 96,22Q106,22 100,44Q114,26 120,34Q122,42 100,44" fill="none" stroke="${C.red}" stroke-width="5"/></g>`;
+}
+
 export const ICONS = {
   ball: () => ball(), "ball-faint": () => ball({ faint: true }), "plain-ball": () => plainBall({ r: 80 }),
-  tv: (o) => tv(o), satellite, globe, trophy, whistle, card: (o) => refCard(o), "card-red": (o = {}) => refCard({ ...o, color: "red" }),
-  goal, stopwatch, calendar: (o) => calendar(o), pitch, boot, scoreboard: scoreboardIcon,
+  tv: (o) => tv(o), satellite, globe, trophy: (o) => trophy(o), whistle, card: (o) => refCard(o), "card-red": (o = {}) => refCard({ ...o, color: "red" }),
+  goal, stopwatch, calendar: (o) => calendar(o), pitch, boot, scoreboard: scoreboardIcon, dog, parcel,
 };
 
 export function icon(name, opts = {}, size = 200) {
