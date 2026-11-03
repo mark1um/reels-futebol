@@ -6,7 +6,7 @@ limpa: siga os passos na ordem, sem pedir aprovação (o dono pediu geração di
 ## 1. Preparar a máquina
 
 ```bash
-./setup.sh          # espeak-ng, venv Python, Kokoro ONNX, Whisper (sherpa-onnx), modelos
+./setup.sh          # (rode de novo se um download falhar) espeak-ng, venv Python, Kokoro ONNX, Whisper (sherpa-onnx), modelos
 npm install         # opentype.js e gsap locais
 ```
 
@@ -64,6 +64,10 @@ devem usar o mesmo ícone (o fim volta ao estado do começo).
 Obs.: sem `variant`, o `hook_card` usa `faint`; para começar com o ícone cheio, use `"variant": "clear"`.
 
 Demos (`src/lib/demos.mjs`) — `beats` apontam para palavras faladas (`"palavra"` ou `"palavra#2"`):
+
+> Atenção: `stamp_at` e os `beats` procuram a palavra **primeiro no `explain` e depois no `say`**;
+> `"palavra#2"` conta nessa ordem. Se a palavra aparece nos dois, sem `#n` vale a do `explain`.
+> O `title_at` procura só no `say`.
 | type | params | beats |
 |---|---|---|
 | `tv_fade` | — | `fade` |

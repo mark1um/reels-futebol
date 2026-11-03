@@ -1,0 +1,124 @@
+{
+  "slug": "2026-11-03-copa-sem-final",
+  "voice": "pm_santa",
+  "topic": "A Copa de 1950 foi a única sem jogo final: título decidido num quadrangular, Brasil precisava só de um empate e perdeu para o Uruguai no Maracanã (Maracanazo)",
+  "sources": [
+    "https://en.wikipedia.org/wiki/1950_FIFA_World_Cup",
+    "https://en.wikipedia.org/wiki/Uruguay_v_Brazil_(1950_FIFA_World_Cup)",
+    "https://www.espn.com/soccer/story/_/id/37363933",
+    "https://www.guinnessworldrecords.com/news/2014/6/world-cup-rewind-world-cup-rewind-largest-attendance-at-a-match-in-the-1950-brazil-final",
+    "https://jovempan.com.br/colunistas/thiago-uberreich/uruguai-e-espanha-empataram-por-2-a-2-na-copa-de-1950-em-jogo-no-pacaembu/",
+    "https://www.correiobraziliense.com.br/webstories/2026/06/7442281-copa-do-mundo-de-1950-entenda-sobre-o-maracanazo.html"
+  ],
+  "pronounce": {
+    "Ghiggia": "Guíjia"
+  },
+  "hook": [
+    "Essa Copa não teve *final*.",
+    "E mesmo assim, o Brasil perdeu a *decisão* mais famosa da história."
+  ],
+  "hook_card": {
+    "icon": "trophy",
+    "variant": "faint",
+    "caption": "copa_1950.ref",
+    "strike_at": "final"
+  },
+  "hook_chips": [
+    { "text": "1950", "at": "Copa" },
+    { "text": "sem final", "at": "final" },
+    { "text": "decisão", "at": "decisão", "payoff": true }
+  ],
+  "points": [
+    {
+      "name": "o formato",
+      "title": ["QUADRANGULAR", "FINAL"],
+      "title_at": "Em",
+      "stat": { "num": "4", "label": "seleções" },
+      "card": { "count_to": 4, "format": "plain", "label": "seleções na fase final", "icon": "globe" },
+      "terminal": "fase final: todos x todos",
+      "say": "Em 1950, o título saiu de um *quadrangular*, e não de uma final.",
+      "explain": "Brasil, Uruguai, Espanha e Suécia jogaram todos contra *todos*.",
+      "stamp": "SEM FINAL",
+      "stamp_at": "todos#2",
+      "demo": {
+        "type": "icon_pop",
+        "items": [
+          { "icon": "globe", "label": "4 seleções" },
+          { "icon": "pitch", "label": "todos x todos" },
+          { "icon": "trophy", "label": "campeão por pontos" }
+        ],
+        "beats": { "i0": "Brasil", "i1": "todos", "i2": "todos#2" }
+      }
+    },
+    {
+      "name": "as goleadas",
+      "title": ["BRASIL", "VOANDO"],
+      "title_at": "O",
+      "stat": { "num": "13", "label": "gols" },
+      "card": { "count_to": 13, "format": "plain", "label": "gols em 2 jogos", "icon": "ball" },
+      "terminal": "7x1 suécia · 6x1 espanha",
+      "say": "O Brasil *atropelou*: 7 a 1 na Suécia e 6 a 1 na Espanha.",
+      "explain": "Já o Uruguai só *empatou* com a Espanha e suou contra a Suécia.",
+      "stamp": "GOLEADA",
+      "stamp_at": "empatou",
+      "demo": {
+        "type": "scoreboard",
+        "home": "brasil",
+        "away": "suécia",
+        "a": 7,
+        "b": 1,
+        "minute": "09/07/1950",
+        "beats": { "score": "atropelou" }
+      }
+    },
+    {
+      "name": "a conta",
+      "title": ["EMPATE", "BASTAVA"],
+      "title_at": "No",
+      "stat": { "num": "1", "label": "ponto" },
+      "card": { "count_to": 1, "format": "plain", "label": "ponto de vantagem", "icon": "scoreboard" },
+      "terminal": "brasil 4 pts · uruguai 3",
+      "say": "No último jogo, o Brasil tinha 4 pontos, e o Uruguai, 3.",
+      "explain": "Um simples *empate* dava a Copa ao Brasil.",
+      "stamp": "EMPATE BASTA",
+      "stamp_at": "Brasil",
+      "demo": {
+        "type": "bars",
+        "items": [
+          { "label": "brasil", "value": 4 },
+          { "label": "uruguai", "value": 3 }
+        ],
+        "format": "plain",
+        "highlight": 0
+      }
+    },
+    {
+      "name": "o maracanazo",
+      "title": ["SILÊNCIO", "TOTAL"],
+      "title_at": "Em",
+      "stat": { "num": "173 mil", "label": "pagantes" },
+      "card": { "count_to": 173850, "format": "thousands", "label": "pagantes no maracanã", "icon": "goal" },
+      "terminal": "16/07/1950 · bra 1 x 2 uru",
+      "say": "Em 16 de julho, no Maracanã, o Uruguai *virou* para 2 a 1.",
+      "explain": "Gol de Ghiggia, diante de 173 mil pagantes, *recorde* em Copas até hoje.",
+      "stamp": "MARACANAZO",
+      "stamp_at": "recorde",
+      "demo": {
+        "type": "scoreboard",
+        "home": "brasil",
+        "away": "uruguai",
+        "a": 1,
+        "b": 2,
+        "minute": "79'",
+        "beats": { "score": "virou" }
+      }
+    }
+  ],
+  "close": "O jogo virou a final de uma Copa que não teve *final*.",
+  "close_card": {
+    "icon": "trophy",
+    "variant": "faint",
+    "caption": "copa_1950.ref",
+    "ring_at": "final#2"
+  }
+}

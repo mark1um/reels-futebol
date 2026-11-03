@@ -27,8 +27,13 @@ m.graph.output.append(onnx.helper.make_tensor_value_info('/encoder/Gather_output
 onnx.save(m, 'models/kokoro-v1.0-dur.onnx')
 EOF
 fi
-if [ ! -d models/sherpa-onnx-whisper-small ]; then
-  curl -sSfL https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-whisper-small.tar.bz2 | tar xj -C models
+# Baixa para arquivo (com retry) e confere o encoder: um download cortado deixava a pasta pela metade.
+W=models/sherpa-onnx-whisper-small
+if [ ! -f $W/small-encoder.int8.onnx ] || [ ! -f $W/small-decoder.int8.onnx ] || [ ! -f $W/small-tokens.txt ]; then
+  rm -rf $W
+  curl -sSfL --retry 5 --retry-all-errors -C - -o models/whisper-small.tar.bz2 \
+    https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-whisper-small.tar.bz2
+  tar xjf models/whisper-small.tar.bz2 -C models && rm -f models/whisper-small.tar.bz2
 fi
 npx --yes hyperframes@0.8.221 telemetry disable >/dev/null 2>&1 || true
 echo "setup ok"
